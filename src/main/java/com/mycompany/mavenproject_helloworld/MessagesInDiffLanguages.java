@@ -11,6 +11,8 @@ package com.mycompany.mavenproject_helloworld;
  */
 class MessagesInDiffLanguages {
     
+    //Greetings for any day time for russian and english languages.
+    //Cgreetings in other languages may be added.
     final String[] MESSAGES_RUSSIAN = {"Доброе утро, Мир!", "Добрый день, "
         + "Мир!", "Добрый вечер, Мир!", "Доброй ночи, Мир!", "Ошибка определения времени"};
     final String[] MESSAGES_ENGLISH = {"Good morning, World!", "Good day, "

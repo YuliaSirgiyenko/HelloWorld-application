@@ -15,16 +15,24 @@ import org.apache.log4j.Logger;
  */
 public class CurrentSystemStatus {
 
-    int hours = LocalTime.now().getHour();
-    String language = Locale.getDefault().getLanguage();
-    final String DAY_TIMES[] = {"NULL", "MORNING", "DAY", "EVENING", "NIGHT"};
-    
+    //Logger creation
     private static final Logger logger = Logger.getLogger(CurrentSystemStatus.class.getName());
+
+    //Definition of localtime in hours
+    int hours = LocalTime.now().getHour();
     
+    //Definition of language of locale
+    String language = Locale.getDefault().getLanguage();
+    
+    //Creation of constants for further using.
+    final String DAY_TIMES[] = {"NULL", "MORNING", "DAY", "EVENING", "NIGHT"};
+       
     CurrentSystemStatus() {
     }
 
+    //Method for definition of dayTime based on current hours.
     String definitionOfDayTime() {
+        logger.info("Current hours value is " + hours);
         String dayTime = DAY_TIMES[0];
         if (hours >= 6 && hours < 9) {
             dayTime = DAY_TIMES[1];
@@ -38,7 +46,8 @@ public class CurrentSystemStatus {
         else if ((hours >= 0 && hours < 6) || (hours == 23)) {
             dayTime = DAY_TIMES[4];
         }
-        logger.info("Method definitionOfTime is finished");
+        logger.info("Method definitionOfTime is finished, resulted day"
+                + "time is " + dayTime);
         return dayTime;
     }
 

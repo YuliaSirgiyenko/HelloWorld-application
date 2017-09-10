@@ -14,6 +14,7 @@ import static org.junit.Assert.*;
  */
 public class ResultMessageTestPrint extends OutputTest {
 
+    //Defenition of variable for tests run.
     String testMessagesEnglish[] = {"Good morning, World!", "Good day, "
         + "World!", "Good evening, World!", "Good night, World!", "Mistake in time definition"};
 
@@ -23,6 +24,8 @@ public class ResultMessageTestPrint extends OutputTest {
     /**
      * Test of printMessage method, of class ResultMessage.
      */
+    
+    //Check of console message for dayTime = MORNING.
     @Test
     public void testPrintMessageMorning() {
         ResultMessage instance = new ResultMessage();
@@ -30,6 +33,7 @@ public class ResultMessageTestPrint extends OutputTest {
         assertEquals("Good morning, World!", output.toString());
     }
 
+    //Check of console message for dayTime = DAY.
     @Test
     public void testPrintMessageDay() {
         ResultMessage instance = new ResultMessage();
@@ -37,6 +41,7 @@ public class ResultMessageTestPrint extends OutputTest {
         assertEquals("Good day, World!", output.toString());
     }
 
+    //Check of console message for dayTime = EVENING.
     @Test
     public void testPrintMessageEvening() {
         ResultMessage instance = new ResultMessage();
@@ -44,6 +49,7 @@ public class ResultMessageTestPrint extends OutputTest {
         assertEquals("Good evening, World!", output.toString());
     }
 
+    //Check of console message for dayTime = NIGHT.
     @Test
     public void testPrintMessageNight() {
         ResultMessage instance = new ResultMessage();
@@ -51,6 +57,7 @@ public class ResultMessageTestPrint extends OutputTest {
         assertEquals("Good night, World!", output.toString());
     }
 
+    //Check of console message for NULL dayTime.
     @Test
     public void testPrintMessageNull() {
         ResultMessage instance = new ResultMessage();
@@ -58,6 +65,7 @@ public class ResultMessageTestPrint extends OutputTest {
         assertEquals("Mistake in time definition", output.toString());
     }
     
+    //Check of console message for impossible dayTime.
     @Test
     public void testPrintMessageDefault() {
         ResultMessage instance = new ResultMessage();

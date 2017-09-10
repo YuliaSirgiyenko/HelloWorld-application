@@ -24,6 +24,7 @@ public class CurrentSystemStatusTest {
     /**
      * Test of definitionOfDayTime method, of class CurrentSystemStatus.
      */
+    //Check of night time calculation.
     @Test
     public void testDefinitionOfDayTimeNight() {
         CurrentSystemStatus instance = new CurrentSystemStatus();
@@ -35,6 +36,7 @@ public class CurrentSystemStatusTest {
         assertEquals("NIGHT", instance.definitionOfDayTime());
     }
 
+    //Check of morning time calculation.
     @Test
     public void testDefinitionOfDayTimeMorning() {
         CurrentSystemStatus instance = new CurrentSystemStatus();
@@ -44,6 +46,7 @@ public class CurrentSystemStatusTest {
         }
     }
 
+    //Check of day time calculation.
     @Test
     public void testDefinitionOfDayTimeDay() {
         CurrentSystemStatus instance = new CurrentSystemStatus();
@@ -53,6 +56,7 @@ public class CurrentSystemStatusTest {
         }
     }
 
+    //Check of evening time calculation.
     @Test
     public void testDefinitionOfDayTimeEvening() {
         CurrentSystemStatus instance = new CurrentSystemStatus();
@@ -62,6 +66,7 @@ public class CurrentSystemStatusTest {
         }
     }
 
+    //Check case for impoosible value of hours.
     @Test
     public void testDefinitionOfDayTimeImpossValues() {
         CurrentSystemStatus instance = new CurrentSystemStatus();

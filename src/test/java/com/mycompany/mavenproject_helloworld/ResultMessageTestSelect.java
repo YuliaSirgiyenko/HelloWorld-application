@@ -5,10 +5,6 @@
  */
 package com.mycompany.mavenproject_helloworld;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -18,6 +14,7 @@ import static org.junit.Assert.*;
  */
 public class ResultMessageTestSelect {
 
+    //Defenition of variables in different languges for tests run.
     String[] MESSAGES_RUSSIAN = {"Доброе утро, Мир!", "Добрый день, "
         + "Мир!", "Добрый вечер, Мир!", "Доброй ночи, Мир!", "Ошибка определения времени"};
     String[] MESSAGES_ENGLISH = {"Good morning, World!", "Good day, "
@@ -29,6 +26,8 @@ public class ResultMessageTestSelect {
     /**
      * Test of selectLanguage method, of class ResultMessage.
      */
+
+    //Test of correct definition of greeting depends on language for russian.
     @Test
     public void testSelectLanguageRu() {
         ResultMessage instance = new ResultMessage();
@@ -38,6 +37,7 @@ public class ResultMessageTestSelect {
         assertArrayEquals(expResult, result);
     }
 
+        //Test of correct definition of greeting depends on language for english.
     @Test
     public void testSelectLanguageEn() {
         ResultMessage instance = new ResultMessage();
@@ -46,7 +46,8 @@ public class ResultMessageTestSelect {
         String[] result = instance.selectLanguage();
         assertArrayEquals(expResult, result);
     }
-
+    
+    //Test of correct definition of greeting depends on language for german.
     @Test
     public void testSelectLanguageDe() {
         ResultMessage instance = new ResultMessage();

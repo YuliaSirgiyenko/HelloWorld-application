@@ -14,6 +14,8 @@ import org.junit.Before;
  *
  * @author Julia
  */
+
+//Abstract class for using in check of console output.
 public abstract class OutputTest {
 
     protected final ByteArrayOutputStream output = new ByteArrayOutputStream();

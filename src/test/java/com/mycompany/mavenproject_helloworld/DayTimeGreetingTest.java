@@ -20,6 +20,9 @@ public class DayTimeGreetingTest {
     /**
      * Test of main method, of class StartClass.
      */
+    
+    //Check of ResultMessage object creation (methods will be 
+    //called futher with this obect).
     @Test
     public void testMain() throws Exception {
         String[] args = null;
