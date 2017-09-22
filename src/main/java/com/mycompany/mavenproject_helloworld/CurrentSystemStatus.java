@@ -1,18 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.mavenproject_helloworld;
 
 import java.time.LocalTime;
-import java.util.Locale;
 import org.apache.log4j.Logger;
 
-/**
- *
- * @author Julia
- */
+//@author Julia
 public class CurrentSystemStatus {
 
     //Logger creation
@@ -20,9 +11,6 @@ public class CurrentSystemStatus {
 
     //Definition of localtime in hours
     int hours = LocalTime.now().getHour();
-    
-    //Definition of language of locale
-    String language = Locale.getDefault().getLanguage();
     
     //Creation of constants for further using.
     final String DAY_TIMES[] = {"NULL", "MORNING", "DAY", "EVENING", "NIGHT"};
